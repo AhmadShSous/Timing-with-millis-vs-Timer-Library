@@ -10,7 +10,7 @@ This repository contains two implementations:
 
 ---
 
-## 🔌 Hardware Connections (for both versions)
+##  Hardware Connections (for both versions)
 
 | Component | MCU Pin       | Notes |
 |---|---:|---|
@@ -23,7 +23,7 @@ This repository contains two implementations:
 
 ---
 
-## 🧾 Files
+##  Files
 
 - `main_millis.ino` — millis() implementation (non-blocking)
 - `main_timer1.ino` — Timer1 interrupt implementation (CTC, 1s tick)
@@ -31,7 +31,7 @@ This repository contains two implementations:
 
 ---
 
-## ▶ How to use
+##  How to use
 
 1. Open Arduino IDE
 2. Copy one of the `.ino` files into a new sketch (or save both as separate sketches)
@@ -42,7 +42,7 @@ This repository contains two implementations:
 
 ---
 
-## 🔍 Comparison: Timing Stability & CPU Load
+##  Comparison: Timing Stability & CPU Load
 
 **millis() (software timing)**
 - **Stability**: Good for many applications; depends on correct use of `unsigned long` and subtraction pattern to avoid overflow bugs. Millis is derived from timer interrupts internally, so it is reasonably stable.
@@ -68,6 +68,7 @@ You can simulate both versions on TinkerCad. Replace the link below with your Ti
 
 **TinkerCad Project Link:**  
 https://www.tinkercad.com/things/6FQdCmcJwY2-brave-tumelo?sharecode=RB3ZpWb78SKlYnT_QvaL2y4OAcdvwcS3a1ODR8LEk9M
+
 **Testing steps**
 1. Open the chosen `.ino` sketch in Arduino IDE (or copy to TinkerCad code editor).
 2. Upload / Start simulation.
@@ -78,7 +79,7 @@ https://www.tinkercad.com/things/6FQdCmcJwY2-brave-tumelo?sharecode=RB3ZpWb78SKl
 
 ---
 
-## ✅ Notes & Improvements
+##  Notes & Improvements
 - If you need sub-second resolution in Timer1 solution, set OCR1A to a smaller value (e.g., 1ms tick) and count milliseconds instead of seconds.
 - Keep ISR code short: set flags or change simple ports; avoid long processing or heavy library calls inside ISR.
 - If you want to measure real jitter, use an oscilloscope to capture the LED signal and compute variance.
